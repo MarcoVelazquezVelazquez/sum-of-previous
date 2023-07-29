@@ -14,6 +14,24 @@ public class SumOfPrevious {
 
         //put your code here
 
-        throw new UnsupportedOperationException();
+        boolean[] result = new boolean[array.length];
+
+        result[0] = false;
+        result[1] = false;
+
+        for (int i = 2; i < array.length; i++){
+
+            if (array[i] == (array[i-1] + array[i-2])){
+                result[i] = true;
+            }else {
+                result[i] = false;
+            }
+        }
+
+        return result;
+
+        //return new boolean[0];
+        //throw new UnsupportedOperationException();
+
     }
 }
